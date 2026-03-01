@@ -20,7 +20,7 @@ def upload_file():
         output_image.save(img_io,'PNG')
         img.io.seek(0)
         return send_file(img_io, mimetype='image/png', as_attachment=True, download_name='_rmbg.png')
-  return "Bg remover working"
+  return render_template("index.html")
 
 if __name__ == "__main__":
   app.run(host="0.0.0.0", port=5000)
